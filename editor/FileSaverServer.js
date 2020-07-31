@@ -10,26 +10,24 @@ var serverSaver = function(blob, filename) {
     console.log('in serverSaver')
 
     var fd = new FormData();
-    fd.append('name', filename);
-    fd.append('data', blob);
+    fd.append('filename', filename);
+    fd.append('filedata', blob);
 
-    /*
+    
     // POST data to our save script.
     $.ajax({
         type: 'POST',
-        url: 'save.php',
+        url: 'localhost:9001/filesaver',
         data: fd,
         processData: false,
         contentType: false,
         success: function(data) {
             // Success!
-            alert('Saved! ' + data);
+            alert(data.status);
         },
         error: function(data) {
             // Failure.
             alert('We got a big error here.\n' + JSON.stringify(data));
         }
     });
-
-     */
 };
