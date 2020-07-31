@@ -15,8 +15,6 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({ storage: storage })
-
-var fs = require('fs')
 var router = express.Router();
 
 /* GET home page. */
