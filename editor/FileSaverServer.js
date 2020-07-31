@@ -4,6 +4,10 @@
 * I just modified his original version to fit my requirements
 */
 
+
+//change the api endpoint url with the one you are using
+let apiEndpoint = 'localhost:9001/filesaver'
+
 var serverSaver = function(blob, filename) {
     // FormData lets us send a blob along with other metadata for saving.
 
@@ -17,7 +21,7 @@ var serverSaver = function(blob, filename) {
     // POST data to our save script.
     $.ajax({
         type: 'POST',
-        url: 'localhost:9001/filesaver',
+        url: apiEndpoint,
         data: fd,
         processData: false,
         contentType: false,

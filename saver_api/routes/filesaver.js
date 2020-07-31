@@ -1,10 +1,13 @@
 var express = require('express');
+var multer  = require('multer');
 
-var multer  = require('multer')
+
+//change the upload dir with the one you are using
+let uploadDir = './uploads'
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './uploads')
+    cb(null, uploadDir)
   },
   filename: function (req, file, cb) {
     cb(null, req.body.filename)
