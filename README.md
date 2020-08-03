@@ -17,6 +17,8 @@ To make sure it works well in your browser, consider to use a web server to run 
 
 The back-end service implemented is intended as a simple (but fully working) example made by node-js, in particular with the use of ExpressJs module for the HTTP Rest Endpoint to serve the front-end requests and Multer module to receive Form-Data and save the file.
 
-To run the back-end service run:
+To run the back-end, **first change the upload folder in which you want to save the file with one of your choice** (or create the default *'uploads'* folder in the saver_api directory), then run:
+
 **npm start**
+
 in the saver_api folder
